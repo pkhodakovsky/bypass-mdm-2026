@@ -96,13 +96,13 @@ ask_block_hosts() {
     case $block_choice in
         [Yy]* )
             echo ""
-            sudo sed -i '' '/# MDM Servers/d' /Volumes/macOS\ Base\ System/etc/hosts
-            sudo sed -i '' '/# End/d' /Volumes/macOS\ Base\ System/etc/hosts
-            sudo sed -i '' '/deviceenrollment.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
-            sudo sed -i '' '/mdmenrollment.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
-            sudo sed -i '' '/iprofiles.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
-            sudo sed -i '' '/acmdm.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
-            sudo sed -i '' '/axm-adm-mdm.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/# MDM Servers/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/# End/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/deviceenrollment.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/mdmenrollment.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/iprofiles.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/acmdm.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/axm-adm-mdm.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
 
             echo "# MDM Servers" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
             echo "0.0.0.0 deviceenrollment.apple.com" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
