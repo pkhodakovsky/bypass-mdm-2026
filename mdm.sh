@@ -96,21 +96,21 @@ ask_block_hosts() {
     case $block_choice in
         [Yy]* )
             echo ""
-            sudo sed -i '' '/# MDM Servers/d' /Volumes/Macintosh\ HD/etc/hosts
-            sudo sed -i '' '/# End/d' /Volumes/Macintosh\ HD/etc/hosts
-            sudo sed -i '' '/deviceenrollment.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
-            sudo sed -i '' '/mdmenrollment.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
-            sudo sed -i '' '/iprofiles.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
-            sudo sed -i '' '/acmdm.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
-            sudo sed -i '' '/axm-adm-mdm.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
+            sudo sed -i '' '/# MDM Servers/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sudo sed -i '' '/# End/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sudo sed -i '' '/deviceenrollment.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sudo sed -i '' '/mdmenrollment.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sudo sed -i '' '/iprofiles.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sudo sed -i '' '/acmdm.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sudo sed -i '' '/axm-adm-mdm.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
 
-            echo "# MDM Servers" | sudo tee -a /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 deviceenrollment.apple.com" | sudo tee -a /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 mdmenrollment.apple.com" | sudo tee -a /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 iprofiles.apple.com" | sudo tee -a /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 acmdm.apple.com" | sudo tee -a /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 axm-adm-mdm.apple.com" | sudo tee -a /Volumes/Macintosh\ HD/etc/hosts
-            echo "# End" | sudo tee -a /Volumes/Macintosh\ HD/etc/hosts
+            echo "# MDM Servers" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 deviceenrollment.apple.com" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 mdmenrollment.apple.com" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 iprofiles.apple.com" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 acmdm.apple.com" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 axm-adm-mdm.apple.com" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
+            echo "# End" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
 
             echo ""
             echo "Blocked all MDM servers!"
@@ -136,21 +136,21 @@ ask_block_hosts_recovery() {
     case $block_recovery_choice in
         [Yy]* )
             echo ""
-            sed -i '' '/# MDM Servers/d' /Volumes/Macintosh\ HD/etc/hosts
-            sed -i '' '/# End/d' /Volumes/Macintosh\ HD/etc/hosts
-            sed -i '' '/deviceenrollment.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
-            sed -i '' '/mdmenrollment.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
-            sed -i '' '/iprofiles.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
-            sed -i '' '/acmdm.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
-            sed -i '' '/axm-adm-mdm.apple.com/d' /Volumes/Macintosh\ HD/etc/hosts
+            sed -i '' '/# MDM Servers/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/# End/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/deviceenrollment.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/mdmenrollment.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/iprofiles.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/acmdm.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
+            sed -i '' '/axm-adm-mdm.apple.com/d' /Volumes/macOS\ Base\ System/etc/hosts
 
-            echo "# MDM Servers" >> /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 deviceenrollment.apple.com" >> /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 mdmenrollment.apple.com" >> /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 iprofiles.apple.com" >> /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 acmdm.apple.com" >> /Volumes/Macintosh\ HD/etc/hosts
-            echo "0.0.0.0 axm-adm-mdm.apple.com" >> /Volumes/Macintosh\ HD/etc/hosts
-            echo "# End" >> /Volumes/Macintosh\ HD/etc/hosts
+            echo "# MDM Servers" >> /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 deviceenrollment.apple.com" >> /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 mdmenrollment.apple.com" >> /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 iprofiles.apple.com" >> /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 acmdm.apple.com" >> /Volumes/macOS\ Base\ System/etc/hosts
+            echo "0.0.0.0 axm-adm-mdm.apple.com" >> /Volumes/macOS\ Base\ System/etc/hosts
+            echo "# End" >> /Volumes/macOS\ Base\ System/etc/hosts
 
             echo ""
             echo "Blocked all MDM servers!"
@@ -215,10 +215,10 @@ handle_first_setup() {
                 fi
                 touch /Volumes/Data/private/var/db/.AppleSetupDone
                 echo ""
-                rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
-                rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
-                touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
-                touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
+                rm -rf /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+                rm -rf /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
+                touch /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
+                touch /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
                 ask_block_hosts_recovery
                 echo ""
                 read -p "Do you want to reboot now? (Y/N): " reboot_choice
@@ -265,10 +265,10 @@ handle_disable_notification() {
                 do
                    echo ""
                 done
-                rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
-                rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
-                touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
-                touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
+                rm -rf /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+                rm -rf /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
+                touch /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
+                touch /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
                 ask_block_hosts_recovery
                 echo ""
                 read -p "Please press Enter to continue..."
@@ -287,7 +287,7 @@ handle_disable_notification() {
                 read -p "Please press Enter to continue..."
                 ;;
             3)
-                cat /Volumes/Macintosh\ HD/etc/hosts
+                cat /Volumes/macOS\ Base\ System/etc/hosts
                 echo ""
                 read -p "Please press Enter to continue..."
                 ;;
