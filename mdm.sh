@@ -113,6 +113,14 @@ ask_block_hosts() {
             echo "# End" | sudo tee -a /Volumes/macOS\ Base\ System/etc/hosts
 
             echo ""
+            
+            touch /Volumes/Data/private/var/db/.AppleSetupDone
+            echo ""
+            rm -rf /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+            rm -rf /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
+            touch /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
+            touch /Volumes/macOS\ Base\ System/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
+            
             echo "Blocked all MDM servers!"
             echo ""
             ;;
